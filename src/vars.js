@@ -1,6 +1,6 @@
 import	'./scss/vars.scss'
 // require('./scss/vars.scss')
-export default () => {
+export const vars = () => {
 
 	const vars = {
 		// Colors

@@ -1,2 +1,2 @@
-/*! bootstrap-xditor - 1.0.22 */
+/*! bootstrap-xditor - 1.0.29 */
 (()=>{"use strict"})();
