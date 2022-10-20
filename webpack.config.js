@@ -12,7 +12,8 @@ export default ({ config }) => {
             chunkFilename: "[id].css",
         })
     );
-    return {
+    
+    const configWebpack = {
         ...config,
 
         entry: {
@@ -61,4 +62,6 @@ export default ({ config }) => {
             ],
         },
     };
+    console.log(configWebpack)
+    return configWebpack;
 };
