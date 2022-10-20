@@ -8,23 +8,27 @@ export default ({ config }) => {
     const isBuild = mode === "production";
     plugins.push(
         new MiniCssExtractPlugin({
-            filename: "[name].css",
+            filename: "./styles/[name].css",
             chunkFilename: "[id].css",
         })
     );
+    console.log(config)
     
     const configWebpack = {
         ...config,
 
         entry: {
-            'index': entry,
-            'vars': path.resolve(__dirname, './src/vars'),
+            index: entry,
+            vars: path.resolve(__dirname, './src/vars.js'),
         },
         output: {
             // ...output,
             path: path.resolve(path.join(__dirname, "./dist")),
             filename: '[name].js',
-            chunkFilename: '[name].js'
+            chunkFilename: '[name].js',
+            library: 'bootstrap-xditor',
+            libraryTarget: 'umd',
+            globalObject: "typeof globalThis !== 'undefined' ? globalThis : (typeof window !== 'undefined' ? window : this)"
         },
         plugins: plugins,
         module: {

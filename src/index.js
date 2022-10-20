@@ -2,10 +2,14 @@ import loadComponents from './components';
 import loadBlocks from './blocks';
 import en from './locale/en';
 
-import './scss/index.scss'
-
+// import './scss/index.scss'
+import './scss/index.scss';
+import { vars } from './vars';
 
 export default grapesjs.plugins.add("bootstrap-xditor", (editor, opts ) => {
+
+ 
+  console.log("bootstrap-xditor");
   const options = { ...{
     i18n: {},
     // default options
