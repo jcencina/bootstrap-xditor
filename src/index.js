@@ -4,7 +4,7 @@ import en from './locale/en';
 
 // import './scss/index.scss'
 import './scss/index.scss';
-import { vars } from './vars';
+import { vars } from './vars?inline';
 
 export default grapesjs.plugins.add("bootstrap-xditor", (editor, opts ) => {
 
